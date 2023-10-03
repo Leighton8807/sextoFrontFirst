@@ -2,13 +2,13 @@ import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactUs.css'
 
- export const ContactUs = () => {
+ const ContactUs = () => {
 
-  const refForm = useRef;
+  const refForm = useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(refForm.current);
+
     const serviceId = 'service_lmshxzf';
     const template = 'template_40d1tix';
     const apikey = '-Dk6ttThLy_GGtr52';
@@ -19,7 +19,7 @@ import './ContactUs.css'
   }
 
   return (
-    <form ref="refForm" onSubmit={handleSubmit}>
+    <form ref={refForm} onSubmit={handleSubmit}>
       <div className="header-contact">
         <h2>Contact Us</h2>
         <p>Pleae feill this form</p>
@@ -41,3 +41,4 @@ import './ContactUs.css'
   )
 }
 
+export default ContactUs;

@@ -1,5 +1,4 @@
-
-import  ContactUs  from './ContactUs/ContactUs'
+import  ContactUs  from "./ContactUs/ContactUs";
 
 function App() {
   
